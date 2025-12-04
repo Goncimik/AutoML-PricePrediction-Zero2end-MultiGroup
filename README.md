@@ -56,7 +56,6 @@ Hedef:
 
 ## 📂 4. Proje Yapısı (Klasörler)
 ```
----
 project/
 │
 ├── data/                # Ham ve işlenmiş veri setleri
@@ -71,7 +70,7 @@ project/
 │
 ├── requirements.txt      # Projede kullanılan paketler
 └── README.md             # Proje açıklama dosyası
----
+
 ```
 ## 📊 5. Veri Seti
 
