@@ -55,6 +55,7 @@ Hedef:
 ---
 
 ## 📂 4. Proje Yapısı (Klasörler)
+
 project/
 │
 ├── data/ # Ham ve işlenmiş veri setleri
@@ -76,10 +77,7 @@ Bu yapı, üretim seviyesinde bir ML projesinin gerektirdiği tüm bileşenleri 
 
 ---
 
-## 📊 5. Veri Seti Bilgisi
-
-**Kaynak:** Kaggle – Used Cars Price Prediction Dataset  
-(Burada veri seti seçildikten sonra link eklenecek.)
+## 📊 5. Veri Seti
 
 **Tahmini kolonlar:**
 - `brand`
@@ -93,8 +91,6 @@ Bu yapı, üretim seviyesinde bir ML projesinin gerektirdiği tüm bileşenleri 
 - `torque`
 - `owner_type`
 - `price` (target)
-
-Bu alanlar fiyat tahmini için en kritik değişken gruplarını temsil eder.
 
 ---
 
@@ -122,7 +118,6 @@ Bu alanlar fiyat tahmini için en kritik değişken gruplarını temsil eder.
 ### **4) Baseline Model**
 - Linear Regression
 - Decision Tree Regressor  
-(bu adım karşılaştırma için gereklidir)
 
 ### **5) Model Optimization**
 - Random Forest
@@ -162,21 +157,8 @@ GridSearchCV veya Optuna ile tuning
 
 ---
 
-## 📝 9. Geliştirme Durumu (Güncellenecek)
-
-- ✔ Proje yapısı oluşturuldu  
-- ☐ Veri seti eklendi  
-- ☐ EDA tamamlandı  
-- ☐ Baseline model kuruldu  
-- ☐ Feature Engineering tamamlandı  
-- ☐ Final model seçildi  
-- ☐ Deployment yapıldı  
-
----
-
+## 📝 9. Geliştirme Durumu 
 ## ✨ 10. Katkı
-
-Proje, kişisel öğrenme ve bootcamp değerlendirme amacı taşıdığından dış katkıya kapalıdır.
 
 
 
