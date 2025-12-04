@@ -53,29 +53,9 @@ Hedef:
 - Tüm süreci otomasyona uygun bir pipeline’a dönüştürmek  
 
 ---
-
 ## 📂 4. Proje Yapısı (Klasörler)
 
-project/
-│
-├── data/ # Ham ve işlenmiş veri setleri
-├── notebooks/ # EDA, baseline, modelleme ve tuning notebookları
-├── src/ # Python scriptleri
-│ ├── config.py
-│ ├── pipeline.py
-│ └── inference.py
-│
-├── models/ # Eğitilmiş modeller (.pkl / .joblib)
-├── docs/ # Teorik açıklamalar, taslaklar, notlar
-│
-├── requirements.txt # Projede kullanılan paketler
-└── README.md # Proje açıklama dosyası
 
-
-
-Bu yapı, üretim seviyesinde bir ML projesinin gerektirdiği tüm bileşenleri kapsar.
-
----
 
 ## 📊 5. Veri Seti
 
