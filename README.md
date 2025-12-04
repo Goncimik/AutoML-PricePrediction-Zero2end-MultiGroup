@@ -72,7 +72,7 @@ project/
 └── README.md             # Proje açıklama dosyası
 
 
-
+---
 ## 📊 5. Veri Seti
 
 **Tahmini kolonlar:**
