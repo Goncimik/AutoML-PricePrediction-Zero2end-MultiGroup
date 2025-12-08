@@ -65,36 +65,49 @@ AutoML-PricePrediction-Zero2end-MultiGroup/
 
 ##  Proje Akışının Özeti
 
-1. **EDA (01_eda.ipynb)**  
-   - Veri analizi  
-   - Eksik/aykırı değerler  
-   - Dağılımlar & korelasyon  
+`notebooks/` klasöründe süreç aşağıdaki gibi ilerlemektedir:
 
-2. **Baseline (02_baseline.ipynb)**  
-   - İlk model ve ilk skorlar  
-   - Baseline değerlendirmesi  
+1. **1-eda.ipynb**  
+   - Veri setinin incelenmesi, eksik/aykırı değerler, dağılımlar, korelasyonlar  
 
-3. **Feature Engineering (03_feature_engineering.ipynb)**  
-   - age, km_per_year, price_per_km, log dönüşümleri  
-   - Feature etkilerinin analizi  
+2. **2-baseline.ipynb**  
+   - Basit feature set ile baseline model kurulumu (Linear Regression / temel RF)  
+   - İlk RMSE / MAE / R² sonuçları  
 
-4. **Model Optimization (04_model_optimization.ipynb)**  
-   - RandomForest, XGBoost, LightGBM  
-   - Hiperparametre araması  
+3. **3-feature-engineering-baseline-model.ipynb**  
+   - price_per_km, log_kmDriven, km_per_year gibi yeni feature’ların türetilmesi  
+   - FE sonrası performansın baseline ile karşılaştırılması  
 
-5. **Model Evaluation  (05_model_evaluation.ipynb)**  
+4. **4-model-optimization.ipynb**  
+   - RandomForest, XGBoost ve LightGBM modellerinin denenmesi  
+   - Validation set üzerinde model karşılaştırması  
+   - En iyi modelin seçilmesi (RandomForest)  
+
+5. **5-model-evaluation.ipynb**  
+   - Final modelin performans metrikleri  
    - Feature importance  
-   - SHAP summary & dependence  
+   - SHAP ile model açıklanabilirliği  
 
-6. ** Pipeline (06_pipeline.ipynb)**  
-   - Final feature set  
-   - Final model eğitimi  
-   - Test set performansı  
-   - Model kaydetme & inference örnekleri  
+6. **6-pipeline.ipynb**  
+   - Preprocess + model → tek pipeline  
+   - Train / Validation / Test ayrımı  
+   - Test performansı  
+
+7. **final-model.ipynb**  
+   - Data leakage tespiti (log_price) ve düzeltilmesi  
+   - Düzeltilmiş feature set ile modellerin yeniden eğitilmesi  
+   - Final RandomForest modelinin seçimi  
+   - Test sonuçları  
+   - Model kaydetme (pickle)  
+   - Tahmin fonksiyonu (`predict_car_price`)
+
+---
 
 ---
 
 ##  Final Model Performansı
+
+RandomForest modeli; performans, açıklanabilirlik ve stabilite açısından final model olarak seçilmiştir.
 
 Final model: **RandomForest Regressor**
 
