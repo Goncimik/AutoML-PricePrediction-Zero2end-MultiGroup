@@ -34,7 +34,7 @@ AutoML-PricePrediction-Zero2end-MultiGroup/
 ├── notebooks/
 │   ├── 01_eda.ipynb
 │   ├── 02_baseline.ipynb
-│   ├── 03_feature_engineering.ipynb
+│   ├── 03_feature_engineering_baseline_model.ipynb
 │   ├── 04_model_optimization.ipynb
 │   ├── 05_model_evaluation.ipynb
 │   ├── 06_pipeline.ipynb
@@ -49,12 +49,13 @@ AutoML-PricePrediction-Zero2end-MultiGroup/
 │   └── final_model.pkl
 │
 ├── docs/
-│   ├── eda.md
-│   ├── baseline.md
-│   ├── feature_engineering.md
-│   ├── model_optimization.md
-│   ├── model_evaluation.md
-│   ├── pipeline.md
+│   ├── 00_setup.md
+│   ├── 01_data_overview.md
+│   ├── 02_baseline.md
+│   ├── 03_feature_engineering_baseline_model.md
+│   ├── 04_model_optimization.md
+│   ├── 05_model_evaluation.md
+│   ├── 06_pipeline.md
 │   └── final_model.md
 │
 ├── requirements.txt
