@@ -4,6 +4,8 @@ Bu proje, ikinci el araçların fiyatlarını makine öğrenmesi modelleri kulla
 
 ---
 
+---
+
 ##  Veri Seti
 
 **Kaggle Dataset:** Used Cars Price Prediction Dataset  
@@ -20,6 +22,8 @@ Temel değişkenler:
 - **AskPrice** (hedef değişken)  
 
 Veri seti yaklaşık **15.000 gözlem** içermektedir ve hem kategorik hem sayısal değişkenlerden oluşmaktadır.
+
+---
 
 ---
 
@@ -61,6 +65,8 @@ AutoML-PricePrediction-Zero2end-MultiGroup/
 ├── requirements.txt
 └── README.md
 ```
+
+---
 
 ---
 
@@ -121,6 +127,8 @@ Model fiyat varyansının büyük kısmını açıklamakta ve pratik anlamda yü
 
 ---
 
+---
+
 ##  Açıklanabilirlik (Explainability)
 
 SHAP analizleri ile:
@@ -135,6 +143,8 @@ gibi değişkenlerin fiyat tahminine yön veren ana faktörler olduğu doğrulan
 
 ---
 
+---
+
 ##  Kurulum
 
 ```bash
@@ -145,6 +155,7 @@ pip install -r requirements.txt
 
 ---
 
+---
 ##  Tahmin Alma (Inference)
 
 ```python
@@ -163,11 +174,15 @@ print(predict_price(sample))
 
 ---
 
+---
+
 ##  Notlar
 
 - Proje uçtan uca AutoML sürecini kapsar.  
 - Notebook’lar adım adım geliştirmenin izlenebilmesi için bölümlendirilmiştir.  
 - Final model pipeline yapısı script olarak (`src/pipeline.py`) kodlanmıştır.  
+
+---
 
 ---
 
