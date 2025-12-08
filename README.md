@@ -1,158 +1,166 @@
-# 🚗 AutoML Price Prediction  
-İkinci el araç pazarında, aynı marka ve modele sahip araçlar bile; yaş, kilometre, donanım, yakıt tipi, vites türü gibi özelliklere bağlı olarak çok farklı fiyatlara sahip olabilmektedir. Bu proje, araç ilanlarından elde edilen özellikleri kullanarak **piyasa değerine en yakın fiyat tahminini yapmayı** amaçlayan bir makine öğrenmesi çözümü sunar.
+# 🚗 Used Car Price Prediction — Zero2End AutoML Project
+
+Bu proje, ikinci el araçların fiyatlarını makine öğrenmesi modelleri kullanarak tahmin etmeyi amaçlayan uçtan uca (End-to-End) bir AutoML çalışmasıdır. Veri analizi, özellik mühendisliği, model optimizasyonu, SHAP tabanlı model yorumlama ve tam bir final pipeline yapısı içerir.
 
 ---
 
-##  1. Proje Amacı
+##  Veri Seti
 
-Bu projenin temel amacı; veri bilimi ve makine öğrenmesi yöntemlerini kullanarak **araç fiyat tahmini yapan uçtan uca bir model geliştirmek** ve bu süreci:
+**Kaggle Dataset:** Used Cars Price Prediction Dataset  
+**Dosya:** `used_cars_dataset_v2.csv`  
+**Kaynak:** https://www.kaggle.com/datasets/mohitkumar282/used-car-dataset  
 
-- Veri Keşfi (EDA)  
-- Veri Ön İşleme  
-- Feature Engineering  
-- Modelleme  
-- Hyperparameter Optimization  
-- Final Pipeline  
-- Model Kaydetme ve Yükleme  
-- Deployment  
+Temel değişkenler:  
+- **Make/Model**  
+- **Year**  
+- **kmDriven**  
+- **Fuel Type**  
+- **Transmission**  
+- **Owner Type**  
+- **AskPrice** (hedef değişken)  
 
-adımlarını kapsayan bir yapıya dönüştürmektir.
-
-Bu yaklaşım, bootcamp final projesinin tüm gereksinimlerini karşılayan **tam bir ML pipeline** oluşturur.
-
----
-
-## 2. Sektör Bilgisi
-
-**Sektör:** Otomotiv / İkinci El Araç Pazarı  
-**Temel Sorun:** Araç fiyatları arasındaki geniş farklılık, bilgi asimetrisi ve doğru fiyatı tahmin etme zorluğu
-
-**Bu model ne sağlar?**
-
-- Satıcılar için **adil ve rekabetçi fiyat önerileri**
-- Alıcılar için **gerçek piyasa değerine yakın tahmin**
-- Platformlar için **otomatik fiyat kontrol mekanizması**
-- Sahte veya aşırı şişirilmiş ilanların tespiti
-
-Bu sayede hem piyasa şeffaflığı artar hem de ticari süreçler daha sağlıklı yürütülür.
+Veri seti yaklaşık **15.000 gözlem** içermektedir ve hem kategorik hem sayısal değişkenlerden oluşmaktadır.
 
 ---
 
-##  3. Problem Tanımı
+##  Proje Yapısı
 
-Bir aracın teknik ve yapısal özellikleri göz önüne alındığında, gerçek piyasa değerinin belirlenmesi birçok değişkeni aynı anda dikkate almayı gerektirir.  
-
-Bu projede amaç:
-
-> **Araç ilanı özelliklerini (özellikle marka, model, yıl, kilometre, yakıt tipi, donanım bilgileri) kullanarak aracın satış fiyatını tahmin eden bir regresyon modeli geliştirmek.**
-
-Hedef:
-
-- Fiyat tahminlerindeki hata oranını (**RMSE / MAE**) düşürmek  
-- Gerçekçi, genellenebilir ve esnek bir model oluşturmak  
-- Tüm süreci otomasyona uygun bir pipeline’a dönüştürmek  
-
----
-
-##  4. Proje Yapısı (Klasörler)
 ```
-project/
+AutoML-PricePrediction-Zero2end-MultiGroup/
 │
-├── data/                
-├── notebooks/           
-├── src/                
+├── data/
+│   └── used_cars_dataset_v2.csv
+│
+├── notebooks/
+│   ├── 01_eda.ipynb
+│   ├── 02_baseline.ipynb
+│   ├── 03_feature_engineering.ipynb
+│   ├── 04_model_optimization.ipynb
+│   ├── 05_model_evaluation.ipynb
+│   ├── 06_pipeline.ipynb
+│   └── 07_final_model.ipynb
+│
+├── src/
 │   ├── config.py
 │   ├── pipeline.py
 │   └── inference.py
 │
-├── models/              
-├── docs/                
+├── models/
+│   └── final_model.pkl
 │
-├── requirements.txt      
-└── README.md             
+├── docs/
+│   ├── eda.md
+│   ├── baseline.md
+│   ├── feature_engineering.md
+│   ├── model_optimization.md
+│   ├── model_evaluation.md
+│   ├── pipeline.md
+│   └── final_model.md
+│
+├── requirements.txt
+└── README.md
 ```
-##  5. Veri Seti
-
-**Tahmini kolonlar:**
-- `brand`
-- `model`
-- `year`
-- `mileage`
-- `fuel_type`
-- `transmission`
-- `engine`
-- `power`
-- `torque`
-- `owner_type`
-- `price` (target)
 
 ---
 
-##  6. Proje Akışı (Pipeline)
+##  Proje Akışının Özeti
 
-### **1) EDA (Exploratory Data Analysis)**
-- Veri dağılımları
-- Korelasyon analizi
-- Eksik ve aykırı değer tespiti
-- Price ilişkilerinin görsel analizi
+1. **EDA (01_eda.ipynb)**  
+   - Veri analizi  
+   - Eksik/aykırı değerler  
+   - Dağılımlar & korelasyon  
 
-### **2) Data Cleaning & Preprocessing**
-- Eksik değer doldurma
-- Outlier treatment
-- Kategorik değişken encoding
-- Sayısal değişken scaling
+2. **Baseline (02_baseline.ipynb)**  
+   - İlk model ve ilk skorlar  
+   - Baseline değerlendirmesi  
 
-### **3) Feature Engineering**
-- Araç yaşı (`car_age`)
-- Yıllık km (`km_per_year`)
-- Segment türetme
-- One-hot veya target encoding
-- Model yılı kategorileri
+3. **Feature Engineering (03_feature_engineering.ipynb)**  
+   - age, km_per_year, price_per_km, log dönüşümleri  
+   - Feature etkilerinin analizi  
 
-### **4) Baseline Model**
-- Linear Regression
-- Decision Tree Regressor  
+4. **Model Optimization (04_model_optimization.ipynb)**  
+   - RandomForest, XGBoost, LightGBM  
+   - Hiperparametre araması  
 
-### **5) Model Optimization**
-- Random Forest
-- XGBoost
-- LightGBM  
-GridSearchCV veya Optuna ile tuning
+5. **Model Evaluation  (05_model_evaluation.ipynb)**  
+   - Feature importance  
+   - SHAP summary & dependence  
 
-### **6) Final Pipeline**
-- Preprocessing + Model tek bir Pipeline içinde
-- `joblib` ile kaydedilecek
-
-### **7) Deployment**
-- Streamlit / Gradio arayüz  
-- Kullanıcı girişine fiyat tahmini dönen bir model
+6. ** Pipeline (06_pipeline.ipynb)**  
+   - Final feature set  
+   - Final model eğitimi  
+   - Test set performansı  
+   - Model kaydetme & inference örnekleri  
 
 ---
 
-## 📈 7. Beklenen Sonuçlar
+##  Final Model Performansı
 
-- RMSE ve MAE metriklerinin iyileştirilmesi  
-- Anlamlı özellikler ile açıklanabilir bir model  
-- Farklı modellerin karşılaştırılması  
-- Kullanıcı dostu bir demo arayüzü  
+Final model: **RandomForest Regressor**
 
----
+**Test Set Sonuçları:**  
+- **MAE:** ~34,000  
+- **RMSE:** ~345,000  
+- **R²:** ~0.94  
 
-##  8. Kullanılan Teknolojiler
-
-- Python  
-- NumPy, Pandas  
-- Scikit-learn  
-- XGBoost / LightGBM  
-- Matplotlib, Seaborn  
-- Streamlit / Gradio  
-- Git & GitHub  
-- Kaggle Notebooks  
+Model fiyat varyansının büyük kısmını açıklamakta ve pratik anlamda yüksek doğruluk sağlamaktadır.
 
 ---
 
-##  9. Geliştirme Durumu 
-##  10. Katkı
+##  Açıklanabilirlik (Explainability)
+
+SHAP analizleri ile:
+
+- price_per_km  
+- kmDriven  
+- age  
+- year  
+- premium marka etkileri  
+
+gibi değişkenlerin fiyat tahminine yön veren ana faktörler olduğu doğrulanmıştır. 
+
+---
+
+##  Kurulum
+
+```bash
+git clone https://github.com/Goncimik/AutoML-PricePrediction-Zero2end-MultiGroup.git
+cd AutoML-PricePrediction-Zero2end-MultiGroup
+pip install -r requirements.txt
+```
+
+---
+
+##  Tahmin Alma (Inference)
+
+```python
+from src.inference import predict_price
+
+sample = {
+    "brand": "BMW",
+    "year": 2018,
+    "kmDriven": 85000,
+    "fuel": "Diesel",
+    "transmission": "Automatic"
+}
+
+print(predict_price(sample))
+```
+
+---
+
+##  Notlar
+
+- Proje uçtan uca AutoML sürecini kapsar.  
+- Notebook’lar adım adım geliştirmenin izlenebilmesi için bölümlendirilmiştir.  
+- Final model pipeline yapısı script olarak (`src/pipeline.py`) kodlanmıştır.  
+
+---
+
+##  İletişim
+
+Geliştirmeler, katkılar veya öneriler için issue/pull request açabilirsiniz.
+
 
 
 
