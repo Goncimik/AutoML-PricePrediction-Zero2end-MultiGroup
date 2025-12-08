@@ -1,6 +1,9 @@
 # 🚗 Used Car Price Prediction — Zero2End AutoML Project
 
-Bu proje, ikinci el araçların fiyatlarını makine öğrenmesi modelleri kullanarak tahmin etmeyi amaçlayan uçtan uca (End-to-End) bir AutoML çalışmasıdır. Veri analizi, özellik mühendisliği, model optimizasyonu, SHAP tabanlı model yorumlama ve tam bir final pipeline yapısı içerir.
+Bu proje, benim kapsamlı olarak ele aldığım ilk ML projesidir. 🚀
+
+Proje, ikinci el araçların fiyatlarını makine öğrenmesi modelleri kullanarak tahmin etmeyi amaçlayan uçtan uca (End-to-End) bir AutoML çalışmasıdır. 
+Veri analizi, özellik mühendisliği, model optimizasyonu, SHAP tabanlı model yorumlama ve tam bir final pipeline yapısı içerir.
 
 ---
 
