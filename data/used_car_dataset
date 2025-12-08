@@ -1,1 +1,25 @@
+ ## Veri Setinin Genel Tanımı
+
+- Çalışmada kullanılan veri seti, ikinci el araçların çeşitli özelliklerini içeren tabular bir yapıya sahiptir. 
+
+🔗 Kaggle Veri Seti Adı:
+
+“Used Cars Price Prediction Dataset” (used_cars_dataset_v2.csv)
+
+🔗 Kaggle Linki:
+
+https://www.kaggle.com/datasets/mohitkumar282/used-car-dataset
+
+
+- Temel değişkenler:
+
+- Make / Model: Araç marka–model bilgisi
+- Year: Üretim yılı
+- kmDriven: Kullanım kilometresi
+- Fuel Type: Benzin, Dizel vb.
+- Transmission: Manual / Automatic
+- Owner Type: 1., 2. veya daha fazla sahiplik
+- AskPrice: Satıcının istediği fiyat (hedef değişken)
+- Toplam gözlem sayısı ~15.000 civarındadır.
+
 
