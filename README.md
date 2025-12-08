@@ -3,7 +3,7 @@
 
 ---
 
-## 🔍 1. Proje Amacı
+##  1. Proje Amacı
 
 Bu projenin temel amacı; veri bilimi ve makine öğrenmesi yöntemlerini kullanarak **araç fiyat tahmini yapan uçtan uca bir model geliştirmek** ve bu süreci:
 
@@ -22,7 +22,7 @@ Bu yaklaşım, bootcamp final projesinin tüm gereksinimlerini karşılayan **ta
 
 ---
 
-## 🏭 2. Sektör Bilgisi
+## 2. Sektör Bilgisi
 
 **Sektör:** Otomotiv / İkinci El Araç Pazarı  
 **Temel Sorun:** Araç fiyatları arasındaki geniş farklılık, bilgi asimetrisi ve doğru fiyatı tahmin etme zorluğu
@@ -38,7 +38,7 @@ Bu sayede hem piyasa şeffaflığı artar hem de ticari süreçler daha sağlık
 
 ---
 
-## ❓ 3. Problem Tanımı
+##  3. Problem Tanımı
 
 Bir aracın teknik ve yapısal özellikleri göz önüne alındığında, gerçek piyasa değerinin belirlenmesi birçok değişkeni aynı anda dikkate almayı gerektirir.  
 
@@ -54,25 +54,24 @@ Hedef:
 
 ---
 
-## 📂 4. Proje Yapısı (Klasörler)
+##  4. Proje Yapısı (Klasörler)
 ```
 project/
 │
-├── data/                # Ham ve işlenmiş veri setleri
-├── notebooks/           # EDA, baseline, modelleme ve tuning notebookları
-├── src/                 # Python scriptleri
+├── data/                
+├── notebooks/           
+├── src/                
 │   ├── config.py
 │   ├── pipeline.py
 │   └── inference.py
 │
-├── models/              # Eğitilmiş modeller (.pkl / .joblib)
-├── docs/                # Teorik açıklamalar, taslaklar, notlar
+├── models/              
+├── docs/                
 │
-├── requirements.txt      # Projede kullanılan paketler
-└── README.md             # Proje açıklama dosyası
-
+├── requirements.txt      
+└── README.md             
 ```
-## 📊 5. Veri Seti
+##  5. Veri Seti
 
 **Tahmini kolonlar:**
 - `brand`
@@ -89,7 +88,7 @@ project/
 
 ---
 
-## 🧠 6. Proje Akışı (Pipeline)
+##  6. Proje Akışı (Pipeline)
 
 ### **1) EDA (Exploratory Data Analysis)**
 - Veri dağılımları
@@ -139,7 +138,7 @@ GridSearchCV veya Optuna ile tuning
 
 ---
 
-## 🛠 8. Kullanılan Teknolojiler
+##  8. Kullanılan Teknolojiler
 
 - Python  
 - NumPy, Pandas  
@@ -152,8 +151,8 @@ GridSearchCV veya Optuna ile tuning
 
 ---
 
-## 📝 9. Geliştirme Durumu 
-## ✨ 10. Katkı
+##  9. Geliştirme Durumu 
+##  10. Katkı
 
 
 
