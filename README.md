@@ -237,7 +237,8 @@ print(predict_price(sample))
 Geliştirmeler, katkılar veya öneriler için issue/pull request açabilirsiniz.
 
 ## Son
--  Mutlu Kodlamalar
--  gogo
+-  **Mutlu Kodlamalar** 💫
+- 🌟 🚗 🤖  
+
 
 
