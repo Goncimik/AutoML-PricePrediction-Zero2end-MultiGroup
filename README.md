@@ -147,7 +147,7 @@ Model fiyat varyansının büyük kısmını açıklamakta ve pratik anlamda yü
 
 ---
 
-##  Açıklanabilirlik (Explainability)
+##  Açıklanabilirlik 
 
 SHAP analizleri ile:
 
