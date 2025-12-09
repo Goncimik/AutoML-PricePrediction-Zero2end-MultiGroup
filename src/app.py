@@ -2,13 +2,16 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-from config import FEATURE_COLUMNS
-from pipeline import load_and_fe, split_data, train_pipeline
+from src.config import FEATURE_COLUMNS
+from src.pipeline import load_and_fe, split_data, train_pipeline
 
 
 @st.cache_resource
 def load_model():
-    """Veriyi yükler, FE uygular, modeli eğitir ve cache'ler."""
+    """
+    Veriyi yükler, feature engineering uygular, modeli eğitir ve cache'ler.
+    Böylece her sayfa yenilendiğinde model baştan eğitilmez.
+    """
     df = load_and_fe()
     X_train, X_val, X_test, y_train, y_val, y_test = split_data(df)
     model = train_pipeline(X_train, y_train)
@@ -18,7 +21,9 @@ def load_model():
 model = load_model()
 
 st.title("🚗 Kullanılmış Araç Fiyat Tahmini")
-st.write("Bu uygulama, eğitilmiş RandomForest modelini kullanarak ikinci el araç fiyatı tahmini yapar.")
+st.write(
+    "Bu uygulama, eğitilmiş RandomForest tabanlı bir pipeline kullanarak "
+    "ikinci el araç fiyatı tahmini yapar.")
 
 st.subheader("Araç Bilgilerini Girin")
 
@@ -35,15 +40,12 @@ with col2:
     owner = st.selectbox("Sahiplik (Owner)", ["First Owner", "Second Owner", "Other"])
     fuel = st.selectbox("Yakıt Tipi (FuelType)", ["Petrol", "Diesel", "LPG", "CNG", "Hybrid"])
 
-
 CURRENT_YEAR = 2024
 age = max(0, CURRENT_YEAR - int(year))
-
 
 km_per_year = km / (age + 1)
 log_km = np.log1p(km)
 price_per_km = 0.0  
-
 
 if st.button("Fiyat Tahmini Yap"):
     sample = {
@@ -60,7 +62,10 @@ if st.button("Fiyat Tahmini Yap"):
         "log_kmDriven": float(log_km),}
 
     df_input = pd.DataFrame([sample])[FEATURE_COLUMNS]
+
     y_pred = model.predict(df_input)[0]
 
     st.success(f"💰 Tahmini Araç Fiyatı: **{y_pred:,.0f} ₺**")
-    st.caption("Not: Demo amaçlıdır; gerçek piyasa koşulları ve ilan fiyatları farklılık gösterebilir.")
+    st.caption(
+        "Not: Bu tahmin demo amaçlıdır; gerçek piyasa koşulları ve ilan fiyatları farklılık gösterebilir.")
+
