@@ -7,7 +7,7 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.pipeline import Pipeline
 from sklearn.ensemble import RandomForestRegressor
 
-from .config import (
+from config import (
     DATA_PATH,
     MODEL_PATH,
     FEATURE_COLUMNS,
