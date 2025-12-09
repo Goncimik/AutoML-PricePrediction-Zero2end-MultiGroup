@@ -55,7 +55,7 @@ def build_preprocessor():
         transformers=[
             ("cat", OneHotEncoder(handle_unknown="ignore"), CATEGORICAL_COLS),
             ("num", "passthrough", NUMERICAL_COLS),])
--
+ 
 def train_pipeline(X_train, y_train):
     preprocessor = build_preprocessor()
 
@@ -88,4 +88,3 @@ def run():
 
 if __name__ == "__main__":
     run()
-
