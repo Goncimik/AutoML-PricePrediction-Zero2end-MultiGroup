@@ -165,8 +165,10 @@ gibi değişkenlerin fiyat tahminine yön veren ana faktörler olduğu doğrulan
 ---
 ## Deployment 
 
-- Streamlit 
-
+- Streamlit
+  
+- **Deployment Notu**
+PKL dosyası boyut limiti yüzünden repoya eklenemedi ve model Streamlit üzerinde yeniden eğitilmeye çalışıldı. Ama bu Streamlit deployment denemesinde de veri uyumsuzlukları, CSV dosyasının cloud ortamında bulunamaması ve model-pipeline ilişkisi gibi hatalar nedeniyle uygulama çevrimiçi olarak çalıştırılamadı. Uygulama bu nedenle yalnızca lokal ortamda stabil şekilde çalışacak biçimde bırakıldı.
 ---
 
 ---
@@ -233,7 +235,7 @@ print(predict_price(sample))
 
 Geliştirmeler, katkılar veya öneriler için issue/pull request açabilirsiniz.
 
-## Sonuç
+## Son
 -  Mutlu Kodlamalar
 -  gogo
 
