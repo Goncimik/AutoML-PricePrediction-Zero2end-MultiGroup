@@ -1,9 +1,25 @@
 # 🚗 Used Car Price Prediction — Zero2End AutoML Project
 
-Bu proje, benim kapsamlı olarak ele aldığım ilk ML projesidir. 🚀
+Bu proje, benim kapsamlı olarak ele aldığım ilk Makine Öğrenmesi (ML) projesidir. 🚀
 
 Proje, ikinci el araçların fiyatlarını makine öğrenmesi modelleri kullanarak tahmin etmeyi amaçlayan uçtan uca (End-to-End) bir AutoML çalışmasıdır. 
 Veri analizi, özellik mühendisliği, model optimizasyonu, SHAP tabanlı model yorumlama ve tam bir final pipeline yapısı içerir.
+
+---
+
+---
+## Proje Tanımı
+
+Proje otomotiv sektöründe ikinci el araç fiyat tahmini problemini ele almaktadır.
+Bu tür fiyatlandırma problemleri; araç değerleme, ticari fiyat stratejileri, eksper rapor otomasyonu ve online araç satış platformları için kritik öneme sahiptir.
+
+Bu projede amaç:
+
+- Araç özelliklerinden anlamlı bilgi çıkarmak,
+- Fiyatı etkileyen faktörleri ortaya koymak,
+- Güvenilir bir tahmin pipeline’ı oluşturmak,
+- Yorumlanabilir bir model geliştirmektir.
+
 
 ---
 
@@ -13,7 +29,7 @@ Veri analizi, özellik mühendisliği, model optimizasyonu, SHAP tabanlı model 
 
 **Kaggle Dataset:** Used Cars Price Prediction Dataset  
 **Dosya:** `used_cars_dataset_v2.csv`  
-**Kaynak:** https://www.kaggle.com/datasets/mohitkumar282/used-car-dataset  
+**Kaynak:** Link: https://www.kaggle.com/datasets/mohitkumar282/used-car-dataset
 
 Temel değişkenler:  
 - **Make/Model**  
@@ -147,6 +163,31 @@ gibi değişkenlerin fiyat tahminine yön veren ana faktörler olduğu doğrulan
 ---
 
 ---
+## Deployment 
+
+- Streamlit 
+
+---
+
+---
+
+## Teknolojiler
+
+-Python
+-Pandas
+-NumPy
+-Scikit-Learn
+-XGBoost
+-LightGBM
+-SHAP
+-Matplotlib 
+-Seaborn
+-Pickle
+-Streamlit 
+
+---
+
+---
 
 ##  Kurulum
 
@@ -159,7 +200,7 @@ pip install -r requirements.txt
 ---
 
 ---
-##  Tahmin Alma (Inference)
+## Inference 
 
 ```python
 from src.inference import predict_price
@@ -193,6 +234,8 @@ print(predict_price(sample))
 
 Geliştirmeler, katkılar veya öneriler için issue/pull request açabilirsiniz.
 
-
+## Sonuç
+-  Mutlu Kodlamalar
+-  gogo
 
 
