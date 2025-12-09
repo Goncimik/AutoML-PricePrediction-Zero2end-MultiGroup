@@ -173,17 +173,17 @@ gibi değişkenlerin fiyat tahminine yön veren ana faktörler olduğu doğrulan
 
 ## Teknolojiler
 
--Python
--Pandas
--NumPy
--Scikit-Learn
--XGBoost
--LightGBM
--SHAP
--Matplotlib 
--Seaborn
--Pickle
--Streamlit 
+- Python
+- Pandas
+- NumPy
+- Scikit-Learn
+- XGBoost
+- LightGBM
+- SHAP
+- Matplotlib 
+- Seaborn
+- Pickle
+- Streamlit 
 
 ---
 
@@ -210,8 +210,7 @@ sample = {
     "year": 2018,
     "kmDriven": 85000,
     "fuel": "Diesel",
-    "transmission": "Automatic"
-}
+    "transmission": "Automatic"}
 
 print(predict_price(sample))
 ```
