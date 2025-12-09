@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-from src.config import MODEL_PATH, FEATURE_COLUMNS
+from config import MODEL_PATH, FEATURE_COLUMNS
 
 @st.cache_resource
 def load_model():
