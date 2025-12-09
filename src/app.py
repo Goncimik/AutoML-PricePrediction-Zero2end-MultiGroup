@@ -7,6 +7,7 @@ from src.pipeline import load_and_fe, split_data, train_pipeline
 
 
 
+
 @st.cache_resource
 def load_model():
     """Veriyi yükler, FE uygular, modeli eğitir ve cache'ler."""
