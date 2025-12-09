@@ -9,7 +9,7 @@ Proje, **MultiGroup Zero2End Machine Learning Bootcamp** kapsamında hazırlanm�
 ---
 ## Proje Tanımı
 
-Proje, otomotiv sektöründe ikinci el araçların fiyatlarını makine öğrenmesi modelleri kullanarak tahmin etmeyi amaçlayan uçtan uca (End-to-End) bir AutoML çalışmasıdır. 
+Proje, otomotiv sektöründe ikinci el araçların fiyatlarını makine öğrenmesi modelleri kullanarak tahmin etmeyi amaçlayan uçtan uca  bir AutoML çalışmasıdır. 
 Veri analizi, özellik mühendisliği, model optimizasyonu, SHAP tabanlı model yorumlama ve tam bir final pipeline yapısı içerir.
 
 Bu projede amaç:
