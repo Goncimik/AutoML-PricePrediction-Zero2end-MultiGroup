@@ -2,7 +2,8 @@
 
 Bu proje, benim kapsamlı olarak ele aldığım ilk Machine Learning (ML) projesidir. 🚀
 
-Proje, **MultiGroup Zero2End Machine Learning Bootcamp kapsamında** hazırlanmıştır.
+Proje, **MultiGroup Zero2End Machine Learning Bootcamp** kapsamında hazırlanmıştır.
+
 ---
 
 ---
