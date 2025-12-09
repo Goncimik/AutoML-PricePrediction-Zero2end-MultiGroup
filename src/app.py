@@ -2,10 +2,8 @@ import numpy as np
 import pandas as pd
 import streamlit as st
 
-from src.config import FEATURE_COLUMNS
-from src.pipeline import load_and_fe, split_data, train_pipeline
-
-
+from config import FEATURE_COLUMNS
+from pipeline import load_and_fe, split_data, train_pipeline
 
 
 @st.cache_resource
