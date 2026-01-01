@@ -168,9 +168,14 @@ gibi değişkenlerin fiyat tahminine yön veren ana faktörler olduğu doğrulan
   
 - **Deployment Notu**
 
--  PKL dosyası boyut limiti yüzünden repoya eklenemedi ve model Streamlit üzerinde yeniden eğitilmeye çalışıldı. Ama bu Streamlit deployment denemesinde de veri uyumsuzlukları, CSV dosyasının cloud ortamında bulunamaması ve model-pipeline ilişkisi gibi hatalar nedeniyle uygulama çevrimiçi olarak çalıştırılamadı. Uygulama bu nedenle yalnızca lokal ortamda stabil şekilde çalışacak biçimde bırakıldı. Bu projenin bir kısıtıdır ve bu kısıt ilerleyen süreçlerde yeniden ele alınacaktır.
----
+Eğitilen RandomForest modelinin dosya boyutu, GitHub’ın standart dosya boyutu limitlerini aşmaktadır.
+Bu kısıtı aşmak amacıyla projede büyük model dosyalarının (ör. `.pkl`) takibi için Git LFS
+yapılandırılmıştır. Bu sayede proje, ileride yapılacak bulut tabanlı deployment çalışmaları için
+teknik olarak hazır hale getirilmiştir.
 
+Bootcamp kapsamı ve zaman kısıtları nedeniyle canlıya alma (deployment) adımı bilinçli olarak
+ertelenmiştir. Uygulama halihazırda lokal ortamda stabil şekilde çalışacak biçimde tasarlanmış olup,
+deployment süreci ilerleyen aşamalarda yeniden ele alınacaktır.
 ---
 
 ## Teknolojiler
