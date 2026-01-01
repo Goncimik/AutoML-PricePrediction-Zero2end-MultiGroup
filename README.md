@@ -176,6 +176,8 @@ teknik olarak hazır hale getirilmiştir.
 Bootcamp kapsamı ve zaman kısıtları nedeniyle canlıya alma (deployment) adımı bilinçli olarak
 ertelenmiştir. Uygulama halihazırda lokal ortamda stabil şekilde çalışacak biçimde tasarlanmış olup,
 deployment süreci ilerleyen aşamalarda yeniden ele alınacaktır.
+
+
 ---
 
 ## Teknolojiler
